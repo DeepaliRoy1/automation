@@ -10,9 +10,7 @@ public class xpathtext {
 	}
 	public static void main(String[] args) throws InterruptedException {
 		WebDriver driver = new ChromeDriver();
-		driver.manage().window().maximize();
 		driver.get("https://www.flipkart.com/");
-		driver.navigate().refresh();
 		driver.findElement(By.xpath("//span[text()='✕']")).click();
 		driver.findElement(By.name("q")).sendKeys("iphone15");
 		driver.findElement(By.xpath("//button[@type='submit']")).click();
